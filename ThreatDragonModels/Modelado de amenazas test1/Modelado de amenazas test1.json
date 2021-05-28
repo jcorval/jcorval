@@ -10,7 +10,318 @@
       {
         "title": "diagrama1",
         "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 310,
+                "y": 40
+              },
+              "angle": 0,
+              "id": "a01a0996-8f45-4513-a557-080fa034f38b",
+              "z": 1,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Acceso\ncompletado"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 86,
+                "y": 151
+              },
+              "target": {
+                "x": 586,
+                "y": 150
+              },
+              "vertices": [
+                {
+                  "x": 149,
+                  "y": 156
+                },
+                {
+                  "x": 455,
+                  "y": 150
+                },
+                {
+                  "x": 538,
+                  "y": 150
+                }
+              ],
+              "id": "0ef9a01b-a60e-4f31-909c-895171b76e4b",
+              "z": 2,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 299,
+                "y": 215
+              },
+              "angle": 0,
+              "id": "ab16d19f-71c3-4df5-9808-5ad61fb7fc14",
+              "z": 3,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Persona diferente",
+                  "type": "Spoofing"
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "title": "Encuentro del libro por casualidad",
+                  "type": "Information disclosure",
+                  "mitigation": "Guardar el libro en lugar seguro"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Usuario de la web"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "x": 376,
+                "y": 214
+              },
+              "target": {
+                "id": "a01a0996-8f45-4513-a557-080fa034f38b"
+              },
+              "vertices": [],
+              "id": "4dbf0a84-89d0-4dfe-ac15-ea3d952893b0",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Introducir LOG y\nPASW",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 4,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 320,
+                "y": 404
+              },
+              "angle": 0,
+              "id": "c31efd4f-28d4-448c-8b36-8486c06facd3",
+              "z": 5,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "title": "Robo del libro",
+                  "type": "Spoofing",
+                  "mitigation": "Nunca cambiar el libro del lugar seguro"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "No encontrar el libro",
+                  "type": "Denial of service",
+                  "description": "No se encuentra el libro por lo que no se podria acceder a la web",
+                  "mitigation": "Tener siempre el libro en el mismo lugar seguro"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Cuaderno con las claves"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "c31efd4f-28d4-448c-8b36-8486c06facd3"
+              },
+              "target": {
+                "x": 415,
+                "y": 297
+              },
+              "vertices": [
+                {
+                  "x": 470,
+                  "y": 399
+                },
+                {
+                  "x": 454,
+                  "y": 330
+                }
+              ],
+              "id": "211152af-c53b-451e-bfa9-bb615dffa114",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Recordar las claves",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 6,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "x": 305,
+                "y": 296
+              },
+              "target": {
+                "id": "c31efd4f-28d4-448c-8b36-8486c06facd3"
+              },
+              "vertices": [
+                {
+                  "x": 305,
+                  "y": 311
+                },
+                {
+                  "x": 347,
+                  "y": 375
+                },
+                {
+                  "x": 359,
+                  "y": 392
+                }
+              ],
+              "id": "62e39380-cb8d-4a9f-946f-20d70c5fd6ed",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Acceso al libro",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 7,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 298,
+                "y": 509
+              },
+              "target": {
+                "x": 298,
+                "y": 506
+              },
+              "vertices": [
+                {
+                  "x": 511,
+                  "y": 506
+                },
+                {
+                  "x": 530,
+                  "y": 418
+                },
+                {
+                  "x": 428,
+                  "y": 392
+                },
+                {
+                  "x": 319,
+                  "y": 399
+                },
+                {
+                  "x": 288,
+                  "y": 454
+                }
+              ],
+              "id": "ecbbdeb8-79e2-4da2-8cc0-b11c9fec0450",
+              "z": 8,
+              "attrs": {}
+            }
+          ]
+        },
+        "size": {
+          "height": 597.9005126953125,
+          "width": 790
+        }
       }
     ]
   }
